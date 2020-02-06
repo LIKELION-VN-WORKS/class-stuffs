@@ -1,0 +1,54 @@
+body{
+    background-color: rgb(0, 238, 255);
+    margin: 1rem;
+}
+
+body h1{
+    display:inline;
+    border: 3px solid black;
+    font-family: 'Pacifico', cursive;
+}
+
+body img{
+    display:block;
+    padding:1rem;
+    margin-top: 2rem;
+    border:5px dotted black;
+}
+
+.email a{
+    color:beige;
+}
+
+
+body h3{
+    font-size:2rem;
+    color:white;
+}
+
+body p{
+    font-family: 'Alata', sans-serif;
+}
+
+body ul{
+    font-family: 'Alata', sans-serif;
+}
+
+body ol{
+    font-family: 'Alata', sans-serif;
+}
+
+.profile{
+    width:200px;
+    height:200px;
+}
+
+.insta_icon{
+    font-size:2rem;
+    color:black;
+}
+
+.fa-facebook{
+    font-size:2rem;
+    color:blue;
+}

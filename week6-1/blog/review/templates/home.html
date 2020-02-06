@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="nav">
+      <h1>your blog</h1>
+      <a href="#">home</a>
+      <a href="#">about</a>
+      <a href="#">contact</a>
+    </div>
+    {% block content %}
+    <h2>list</h2>
+    {% for post in posts %}
+    <li><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></li>
+    <br />
+    {% endfor %}
+    <a href="{% url 'new' %}">Create posts</a>
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>airbnb</title>
+		<link rel="stylesheet" href="airbnb.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+			integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+			integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+			integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="bg1">
+			<i class="fab fa-airbnb"></i>
+			<div class="book">
+				Book unique home and experience
+			</div>
+			<div class="searchHosting">
+				<div class="search">
+					Find a place to stay
+					<button
+						type="button"
+						class="btn btn-light btn-block font-weight-bold"
+					>
+						Search
+					</button>
+				</div>
+				<div class="hosting">
+					Share rooms and make income
+					<button type="button" class="btn btn-info btn-block font-weight-bold">
+						Hosting
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="bg2">
+			<div>
+				Destination
+				<div class="form-group">
+					<textarea
+						class="form-control"
+						rows="1"
+						placeholder="locations"
+					></textarea>
+				</div> 
+
+				<div class="form-group d-flex">
+					<div class="stay">
+						<label for="check_in">Check in</label>
+						<textarea
+							class="form-control"
+							rows="1"
+							placeholder="year-month-date"
+							id="check_in"
+						></textarea>
+					</div>
+
+					<div class="stay">
+						<label for="check_in">check out</label>
+						<textarea
+							class="form-control"
+							rows="1"
+							placeholder="year-month-date"
+							id="check_in"
+						></textarea>
+					</div>
+				</div>
+
+				<div class="form-group d-flex">
+					<div class="how_many">
+						<label for="adult">adult</label>
+						<select class="form-control" id="adult">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10</option>
+							<option>11</option>
+							<option>12</option>
+							<option>13</option>
+							<option>14</option>
+							<option>15</option>
+							<option>16</option>
+						</select>
+					</div>
+
+					<div class="how_many">
+						<label for="child">Children</label>
+						<select class="form-control " id="child">
+							<option>0</option>
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+						</select>
+					</div>
+				</div>
+
+				<button type="button" class="btn btn-danger search_btn">Search</button>
+			</div>
+		</div>
+	</body>
+</html>

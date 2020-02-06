@@ -1,0 +1,10 @@
+{% extends "home.html" %} {% block content %}
+<h2>로그인 페이지</h2>
+<!-- 로그인, 회원가입의 통신 request는 항상 post 요청만 줄 것이다. -->
+<form method="POST">
+  {% csrf_token %} {{ form.as_p }}
+  <button type="submit">로그인</button>
+</form>
+<h2>저희 서비스 유저가 아니신가요?</h2>
+<a href="{% url 'signup' %}">회원가입하러 가기</a>
+{% endblock %}

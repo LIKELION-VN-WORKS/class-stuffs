@@ -1,0 +1,27 @@
+body {
+	padding-top: 56px;
+}
+
+.jumbotron {
+	background: url("https://likelion.net/assets/home/om-02-7cf5a9b8b6c5c612b4a190a3c025d626b92f06cecc458c0304936e9516bde213.png")
+		no-repeat center;
+	background-size: 100%;
+	color: white;
+}
+.btn-primary {
+	background-color: #c66a00;
+	border-color: #c66a00;
+}
+
+.btn-secondary {
+	background-color: transparent;
+	background-color: #c66a00;
+	border-color: #c66a00;
+}
+
+#contact {
+	background: url("contact.jpg") no-repeat center;
+}
+.card-img-top {
+	height: 60%;
+}

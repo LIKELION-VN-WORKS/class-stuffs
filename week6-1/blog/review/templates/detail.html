@@ -1,0 +1,20 @@
+{% extends "home.html" %} {% block content %}
+<h2>{{ post.title }}</h2>
+<h5>{{ post.contents }}</h5>
+
+{% for comment in post.comments.all %}
+<li>
+  {{comment.content}}
+  <a href="{% url 'delete_comment' post.pk comment.pk %}">댓글 삭제하기</a>
+</li>
+{% endfor %}
+
+<form method="POST">
+  {% csrf_token %} {{form.as_p}}
+  <input type="submit" value="댓글 제출해보리기!" />
+</form>
+
+<a href="{% url 'home' %}">Back to Main Page</a>
+<a href="{% url 'edit' post.pk %}">편집하기</a>
+<a href="{% url 'delete' post.pk %}">삭제하기</a>
+{% endblock %}

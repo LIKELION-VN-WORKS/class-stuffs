@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Post Details</title>
+</head>
+<body>
+    <h2>Title : {{post.title}}</h2>
+    <h5> Content : {{post.contents}} </h5>
+    <h5> Time : {{post.timeSet}} </h5>
+    <h5> Price : {{post.price}} </h5>
+    <h5> Review Score : {{post.score}} </h5>
+    <a href=" {% url 'home' %} "> Back to Main </a>
+</body>
+</html>
