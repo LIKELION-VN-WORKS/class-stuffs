@@ -1,0 +1,36 @@
+{% extends 'home.html' %} {% block content %}
+
+<h2>title : {{post.title}}</h2>
+<h2>작성자 : {{post.author}} </h2>
+{% if post.img %}
+<img src="{{post.img.url}}" alt="error" height="300px" />
+{% endif %}
+
+<br />
+<h3>review</h3>
+{{post.contents}}
+<br />
+<br />
+
+<h6>price : {{post.price}}</h6>
+<br />
+<h6>score : {{post.rating}}/5 score</h6>
+
+<h6>Comment</h6>
+<ul>
+{% for comment in post.comments.all %}
+<li>&nbsp;:&nbsp;&nbsp;{{ comment.content }}
+<a href="{% url 'delete_comment' post.pk comment.pk %}">&nbsp;&nbsp;<button>Delete Comment</button><a></li>
+{% endfor %}
+</ul>
+<form method="POST">{% csrf_token %}
+{{ form.as_p }}
+<input type="submit" value="댓글 작성">
+</form>
+<br>    
+<a href="{% url 'home' %}"><button>Home</button></a>
+{% if user.is_authenticated and post.author == user.email %}
+<a href="{% url 'edit' post.pk %}"><button >Edit</button></a>
+<a href="{% url 'delete' post.pk %}"><button>Delete</button></a>
+{% endif %}
+{% endblock %}

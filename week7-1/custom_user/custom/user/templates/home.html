@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="{% static 'home.css' %}" />
+    <title>Book Review Blog</title>
+  </head>
+
+  <body>
+    <h1>Book Review Blog</h1>
+
+    {% block content %}
+    <p>
+      {% if user.is_authenticated %}
+      <h3>{{user.email}}님, 환영합니다!</h3> 
+      <a href="{% url 'logout' %}">로그아웃</a>
+      {% else %}
+      <h3>저희 회원이 아니신가요? 회원가입 또는 로그인을 해주세요!</h3>
+      <a href="{% url 'login' %}">로그인</a>
+      <a href="{% url 'signup' %}">회원가입</a>
+      {% endif %}
+    </p>
+    <div>
+      <h1>Book Review Blog</h1>
+      <p>
+        <a href="{% url 'new' %}"><button>Create a Post</button></a>
+      </p>
+      <div>
+        {% for post in posts %}
+        <div>
+          <div>
+            <p><span>{{ post.created_date }}</span></p>
+            {% if post.img %}
+            <img src="{{ post.img.url }}" />
+            {% endif %}
+            <h2><a href="{% url 'detail' post.pk %}">{{ post.title }}</a></h2>
+            <p>{{ post.contents }}</p>
+            <p>
+              <a href="{% url 'detail' post.pk %}">Contents</a>
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
